@@ -2,6 +2,8 @@
 
 A modern web application template built with Next.js 14, TypeScript, Tailwind CSS, and Radix UI. This template provides a clean starting point for your next web project with modern features and beautiful UI components.
 
+![Modern Web Template](public/preview.png)
+
 ## ✨ Features
 
 - 🚀 **Next.js 14** - Latest features including App Router and Server Components
