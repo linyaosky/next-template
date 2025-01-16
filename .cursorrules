@@ -1,0 +1,46 @@
+# Cursor Rules Configuration
+
+# Ignore files and directories
+ignore:
+  - .git
+  - .next
+  - node_modules
+  - .env*
+  - dist
+  - build
+  - coverage
+  - .vercel
+  - .turbo
+  - .cache
+  - public/sitemap*.xml
+  - public/robots.txt
+
+# Language specific settings
+languages:
+  typescript:
+    formatter: prettier
+    linter: eslint
+  javascript:
+    formatter: prettier
+    linter: eslint
+  json:
+    formatter: prettier
+  markdown:
+    formatter: prettier
+
+# Editor settings
+editor:
+  tabSize: 2
+  insertSpaces: true
+  formatOnSave: true
+  defaultFormatter: prettier
+
+# Search settings
+search:
+  exclude:
+    - .git
+    - .next
+    - node_modules
+    - dist
+    - build
+    - coverage
