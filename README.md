@@ -14,12 +14,13 @@ A modern web application template built with Next.js 14, TypeScript, Tailwind CS
 - 📱 **Responsive** - Mobile-first design approach
 - 🎨 **Modern UI** - Beautiful animations and transitions
 - 🔍 **SEO** - Built-in SEO optimization with next-sitemap
+- 📊 **Analytics** - Google Analytics integration
 
 ## 🚀 Getting Started
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/linyaosky/next-template my-project
+git clone https://github.com/yourusername/modern-web-template.git my-project
 cd my-project
 ```
 
@@ -28,7 +29,34 @@ cd my-project
 pnpm install
 ```
 
-3. Start the development server:
+3. Configure environment variables:
+
+The project uses two environment files:
+- `.env.local` for development
+- `.env.production` for production
+
+Create or edit these files with the following variables:
+
+```bash
+# Site Configuration
+NEXT_PUBLIC_SITE_NAME="Template"
+NEXT_PUBLIC_SITE_DESCRIPTION="A modern Next.js template"
+NEXT_PUBLIC_SITE_URL="http://localhost:3100"  # Use your production URL in .env.production
+
+# Social Links
+NEXT_PUBLIC_GITHUB_URL="https://github.com/your-username/template"
+NEXT_PUBLIC_TWITTER_URL="https://twitter.com/your-username"
+NEXT_PUBLIC_GITHUB_HANDLE="your-username"
+
+# SEO
+SITE_URL="http://localhost:3100"  # Use your production URL in .env.production
+NEXT_PUBLIC_CANONICAL_URL="http://localhost:3100"  # Use your production URL in .env.production
+
+# Analytics
+NEXT_PUBLIC_GA_ID=""  # Add your Google Analytics ID
+```
+
+4. Start the development server:
 ```bash
 pnpm dev
 ```

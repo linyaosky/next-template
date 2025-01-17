@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import GoogleAnalytics from "./google-analytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,9 @@ export const metadata: Metadata = {
     },
   ],
   creator: process.env.NEXT_PUBLIC_GITHUB_HANDLE || "your-username",
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_CANONICAL_URL,
+  },
 };
 
 export default function RootLayout({
@@ -37,6 +41,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head />
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -44,11 +49,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+          <GoogleAnalytics />
+          <Header />
+          {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
