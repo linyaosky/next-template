@@ -19,29 +19,21 @@ A modern web application template built with Next.js 14, TypeScript, Tailwind CS
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/modern-web-template.git
-cd modern-web-template
+git clone https://github.com/linyaosky/next-template my-project
+cd my-project
 ```
 
 2. Install dependencies:
 ```bash
-npm install
-# or
-yarn install
-# or
 pnpm install
 ```
 
 3. Start the development server:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3100](http://localhost:3100) with your browser to see the result.
 
 ## 📦 Project Structure
 
@@ -63,6 +55,35 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Radix UI](https://www.radix-ui.com/)
+
+## 📝 Development Notes
+
+### Key Files
+- `app/page.tsx` - Main homepage with modern UI components and animations
+- `app/layout.tsx` - Root layout with dark mode support
+- `components/layout/header.tsx` - Site header with theme toggle
+- `components/layout/footer.tsx` - Site footer
+- `tailwind.config.ts` - Tailwind configuration with custom animations
+- `styles/globals.css` - Global styles and animations
+
+### Available Commands
+```bash
+pnpm dev        # Start development server
+pnpm build      # Build for production
+pnpm start      # Start production server
+pnpm lint       # Run ESLint
+```
+
+### Adding New Pages
+1. Create new page in `app` directory
+2. Use existing components from `components/ui`
+3. Follow established patterns for animations and styling
+
+### Styling Guidelines
+- Use Tailwind CSS utility classes
+- Follow existing color scheme in dark/light modes
+- Maintain consistent spacing using container classes
+- Reuse animation classes from `tailwind.config.ts`
 
 ## 📄 License
 
